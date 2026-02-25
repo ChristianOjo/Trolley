@@ -25,7 +25,7 @@ import type {
   PaymentMethod,
 } from "@/types/database.types";
 
-type DB = SupabaseClient<Database>;
+type DB = SupabaseClient<Database, "public">;
 
 // ═══════════════════════════════════════════════════════════════════════════
 // RESTAURANTS
