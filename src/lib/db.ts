@@ -12,7 +12,6 @@
 
 import type { SupabaseClient } from "@supabase/supabase-js";
 import type {
-  Database,
   Restaurant,
   MenuItem,
   MenuCategory,
@@ -25,7 +24,7 @@ import type {
   PaymentMethod,
 } from "@/types/database.types";
 
-type DB = SupabaseClient<Database, "public">;
+type DB = SupabaseClient<any>;
 
 // ═══════════════════════════════════════════════════════════════════════════
 // RESTAURANTS
