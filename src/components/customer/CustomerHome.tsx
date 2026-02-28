@@ -74,7 +74,10 @@ export default function CustomerHome({ restaurants, zones }: Props) {
     <>
       <style>{CSS}</style>
       <nav className="nav">
-        <div className="nav-logo">Trolley<span>.</span></div>
+        <div style={{display:"flex",alignItems:"center",gap:12}}>
+  <div className="nav-city">📍 Mbabane, Eswatini</div>
+  <a href="/auth/login" style={{background:"#C8943A",color:"#fff",padding:"7px 16px",borderRadius:20,fontSize:13,fontWeight:700,textDecoration:"none"}}>Sign In</a>
+</div>
         <div className="nav-city">📍 Mbabane, Eswatini</div>
       </nav>
 
