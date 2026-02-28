@@ -111,9 +111,6 @@ export default function CustomerHome({ restaurants, zones }: Props) {
     ? <img src={r.cover_image_url} alt={r.name} style={{ width: "100%", height: "100%", objectFit: "cover", position: "absolute", inset: 0 }} />
     : <span style={{ fontSize: 52 }}>{r.emoji}</span>
   }
-  {r.logo_url && (
-    <img src={r.logo_url} alt={`${r.name} logo`} style={{ position: "absolute", bottom: 10, left: 10, height: 36, objectFit: "contain", filter: "brightness(0) invert(1)" }} />
-  )}
   <div className={`card-badge ${!r.is_open ? "closed" : ""}`} style={{ position: "absolute", top: 10, right: 10 }}>{r.is_open ? "Open Now" : "Closed"}</div>
 </div>
               <div className="card-body">
