@@ -106,10 +106,16 @@ export default function CustomerHome({ restaurants, zones }: Props) {
         <div className="grid">
           {filtered.map(r => (
             <div key={r.id} className="card" onClick={() => router.push(`/${r.slug}`)}>
-              <div className="card-img" style={{ background: r.is_open ? "linear-gradient(135deg,#1A3528,#2D5240)" : "linear-gradient(135deg,#2a2a2a,#444)" }}>
-                {r.emoji}
-                <div className={`card-badge ${!r.is_open ? "closed" : ""}`}>{r.is_open ? "Open Now" : "Closed"}</div>
-              </div>
+              <div className="card-img" style={{ background: "linear-gradient(135deg,#1A3528,#2D5240)", position: "relative", overflow: "hidden" }}>
+  {r.cover_image_url
+    ? <img src={r.cover_image_url} alt={r.name} style={{ width: "100%", height: "100%", objectFit: "cover", position: "absolute", inset: 0 }} />
+    : <span style={{ fontSize: 52 }}>{r.emoji}</span>
+  }
+  {r.logo_url && (
+    <img src={r.logo_url} alt={`${r.name} logo`} style={{ position: "absolute", bottom: 10, left: 10, height: 36, objectFit: "contain", filter: "brightness(0) invert(1)" }} />
+  )}
+  <div className={`card-badge ${!r.is_open ? "closed" : ""}`} style={{ position: "absolute", top: 10, right: 10 }}>{r.is_open ? "Open Now" : "Closed"}</div>
+</div>
               <div className="card-body">
                 <div className="card-name">{r.name}</div>
                 <div className="card-meta">{r.cuisine_type} · {r.zone}</div>
