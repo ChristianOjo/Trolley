@@ -76,7 +76,7 @@ export default function CustomerHome({ restaurants, zones }: Props) {
       <nav className="nav">
   <div className="nav-logo">Trolley<span>.</span></div>
   <div style={{display:"flex",alignItems:"center",gap:12}}>
-    <div className="nav-city">📍 Mbabane, Eswatini</div>
+    <div className="nav-city">📍 Ezulwini, Eswatini</div>
     <a href="/auth/login" style={{background:"#C8943A",color:"#fff",padding:"7px 16px",borderRadius:20,fontSize:13,fontWeight:700,textDecoration:"none"}}>Sign In</a>
   </div>
 </nav>
@@ -85,7 +85,7 @@ export default function CustomerHome({ restaurants, zones }: Props) {
         <div className="hero-inner">
           <div className="hero-eyebrow">🇸🇿 Now delivering in Eswatini</div>
           <h1>Great food,<br /><em>delivered fast.</em></h1>
-          <p>Order from Mbabane and Manzini's best restaurants. Pay with MTN MoMo or card.</p>
+          <p>Comming Soon: Order from Mbabane and Manzini's best restaurants. Pay with MTN MoMo or card.</p>
         </div>
       </div>
 
